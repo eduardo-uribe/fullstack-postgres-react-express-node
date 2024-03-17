@@ -11,7 +11,7 @@ export default function Product() {
     // query product data (category, products, suppliers)
     async function getProduct() {
       const request = await fetch(
-        `http://localhost:8080/api/product/${product_id}`
+        `https://fullstack-postgres-react-express-node.onrender.com/api/product/${product_id}`
       );
       const { row } = await request.json();
       setProduct(row[0]);

@@ -6,7 +6,9 @@ export default function Dashboard() {
 
   useEffect(function () {
     async function getUsername() {
-      const request = await fetch('http://localhost:8080/api/inventory');
+      const request = await fetch(
+        'https://fullstack-postgres-react-express-node.onrender.com/api/inventory'
+      );
       const { rows } = await request.json();
 
       setInventory(rows);
